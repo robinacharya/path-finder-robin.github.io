@@ -1,0 +1,116 @@
+<!--Front End Code-->
+
+<!DOCTYPE html>
+<html lang="">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,srink-to-fit=no">
+        <title>Pathfinder</title>
+        <header> 
+          <link rel="FaviconIcon" href="favicon.ico" type="image/x-icon">
+          <link rel="shortcut" href="favicon.ico" type="image/x-icon">
+        </header>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <link rel="stylesheet" href="style.css"/>
+        <!--<link rel = "stylesheet" href = "buttons.css">-->
+        
+    </head>
+
+    <body>
+
+      <h1 id = "heading">PATHFINDER</h1>
+        
+          <div id="battery">
+              
+              <input  type="button" onclick="Rem()" style="height:35px;/*margin-left:100px;*/background-color: white;border-radius: 0.5em;" id="butt" value="Mars Rover Range"></input>
+              
+              <label style="margin-left:5%;color:white;display:inline-block;font-size:20px">Battery  : </label>
+              
+              <div id="myProgress">
+                <div id="myBar"></div>
+              </div>
+              
+              <button  onclick = "recharge()" style="width:100px;margin-left: 5%;">Recharge</button>
+          </div>
+          
+          <div id="algorithm_panel" class="panel right_panel">
+              
+              <input type="radio" id="single_dest" name="algo" value="single_dest">
+              <label for="single_dest">Single Destination</label><br>
+              
+              <div class="form-group">
+                <select class="form-control" id="algorithm-panel">
+                  
+                  <option value="Astar">A*</option>
+                  <option value="DJ">Dijkstra</option>
+                </select>
+              </div>
+              
+              <input type = "radio" id = "multi_dest" name = "algo" value = "multi_dest">
+              <label for = "multi_dest">Multiple Destinations</label><br>
+              <div class="form-group">
+                <select class="form-control" id="multi-algorithm">
+                  <option value="HKA">Held-Karp Algorithm</option>
+                </select>
+              </div>
+            <hr>
+            <header><h2 class="header_title">Diagonals</h2></header>
+            
+            <div class="form-group">
+              <select class="form-control" id="diagonal-panel">
+                
+                <option value="on">Allowed</option>
+                <option value="off">Not Allowed</option>
+                
+              </select>
+            </div>
+          </div>
+          
+          <div id="play_panel" class="panel right_panel">
+            
+            <button id="strt" class="control_button" type="submit" >Start Search</button>
+            <button id="clr" class="control_button" type="submit" >Clear Grid</button>
+            <button id="can" class="control_button" type="submit" >Cancel Search</button>
+          
+          </div>
+          
+          <div id="cursor1"></div>
+          <div id="cursor2"></div>
+          
+          <script src = "JavaScript/p5.js"></script>
+          <script src = "JavaScript/sweet.min.js"></script>
+          <script src = "JavaScript/Grid.js"></script>
+          <script src = "JavaScript/mEvent.js"></script>
+          <script src = "JavaScript/Queue.js"></script>
+          <script src = "JavaScript/Dijkstra.js"></script>
+          <script src = "JavaScript/Astar.js"></script>
+          <script src = "JavaScript/main.js"></script>
+          <script src = "JavaScript/tsp.js"></script>
+          <script src = "JavaScript/range.js"></script>
+          
+          <script>
+          
+            instruction();
+            
+            var yz = document.getElementsByName("algo");
+            yz[0].checked=true;        
+            document.getElementById("can").disabled = true;
+            
+            var abort=false;
+            var first_time=3;
+            var ok = false;
+            var only=false;
+            var old_battery=100;
+            var new_battery=100;
+            
+            var remin=true;
+            display_battery();
+        
+          </script>
+      
+    </body>
+</html>  

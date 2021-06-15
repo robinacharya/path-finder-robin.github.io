@@ -1,0 +1,176 @@
+body {
+    padding: 0px;
+    overflow: hidden;
+    background-image: url("space.jpg");
+}
+
+input {
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px;
+    padding: 0px;
+    font-weight: normal;
+    color: white;
+}
+
+.header_title {
+    font-size: 120%;
+    font-weight: bold;
+    padding-bottom: 5px;
+    margin-top: -10px;
+}
+
+.panel {
+    opacity: 0.8;
+    position: fixed;
+    padding: 10px;
+    color: white;
+    border-radius: 8px;
+    cursor: default;
+    background-image: url("space.jpg");
+}
+
+.select-selected {
+    background-color: DodgerBlue;
+}
+
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+}
+
+.custom-select {
+    position: relative;
+    font-family: Arial;
+}
+
+.right_panel {
+    width: 250px;
+    right: 20px;
+    top: 350px;
+}
+
+#algorithm_panel {
+    right: 20px;
+    top: 90px;
+}
+
+.option_header {
+    font-size: 80%;
+    margin-left: 20px;
+}
+
+.option_label {
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    background: white;
+    border-radius: 5px;
+    font-size: 100%;
+    cursor: pointer;
+    padding-bottom: 0px;
+    margin: 0 2%;
+    width: 28%;
+    color: rgba(0, 0, 0);
+    text-align: center;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+}
+
+a {
+    color: #33f;
+}
+
+.spinner {
+    width: 2em;
+}
+
+#defaultCanvas0 {
+    margin-top: 20px;
+    margin-left: 1%;
+}
+
+#heading {
+    text-align: center;
+    margin: 6px;
+    padding-right: 130px;
+}
+
+#cursor1 {
+    display: none;
+    position: absolute;
+    width: 29px;
+    height: 29px;
+    border: 2px dashed #008000;
+    animation: animate 2s linear infinite;
+    box-sizing: border-box;
+    transition: 0s;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    background-color: #00FF00;
+}
+
+#cursor2 {
+    display: none;
+    position: absolute;
+    width: 29px;
+    height: 29px;
+    border: 2px dashed #8B0000;
+    animation: animate 2s linear infinite;
+    box-sizing: border-box;
+    transition: 0s;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    background-color: #FF0000;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+#battery {
+    display: flex;
+}
+
+#myProgress {
+    margin-left: 0%;
+    width: 50%;
+    background-color: white;
+    height: 2.3em;
+    border-radius: 1.5em;
+}
+
+#myBar {
+    width: 0%;
+    height: 2.3em;
+    border-radius: 1.5em;
+    /*align-items: center;*/
+    background-color: #ADFF2F;
+}
+
+#butt{
+    margin-left: 15px;
+}
